@@ -1,9 +1,20 @@
+/* HEADER */
+
 header {
   background-image: url(../img/wall.png);
-  height: 100px;
+  background-size: contain;
+  height: 130px;
 }
+
+.header-title {
+  font-size: 100px;
+  font-style: italic;
+}
+
+/* MAIN */
 
 main {
   background-image: url(../img/cork.png);
+  background-size: contain;
   height: 100vh;
 }
