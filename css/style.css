@@ -9,11 +9,11 @@
 header {
   background-image: url(../img/wall.png);
   background-size: contain;
-  height: 160px;
+  position: relative;
 }
 
 .header-title {
-  font-size: 100px;
+  font-size: min(10vw, 100px);
   font-style: italic;
 }
 
