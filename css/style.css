@@ -1,0 +1,9 @@
+header {
+  background-image: url(../img/wall.png);
+  height: 100px;
+}
+
+main {
+  background-image: url(../img/cork.png);
+  height: 100vh;
+}
