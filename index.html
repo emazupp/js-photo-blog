@@ -18,10 +18,20 @@
   </head>
 
   <body>
+    <!-- MODAL -->
+    <div id="image-modal-container" class="d-none d-flex flex-column">
+      <div class="d-flex justify-content-center mb-4">
+        <button id="close-modal-button" class="btn btn-primary">Chiudi</button>
+      </div>
+      <img id="image-modal" src="" alt="" />
+    </div>
+
+    <!-- HEADER -->
     <header class="d-flex justify-content-center align-items-center">
       <h1 class="header-title">ESTATE '24</h1>
     </header>
 
+    <!-- MAIN & CARDS -->
     <main>
       <div class="container-sm">
         <div id="cards-container" class="row pt-5 g-4"></div>

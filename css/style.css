@@ -2,6 +2,7 @@
 
 :root {
   --pin-heigth: 40px;
+  --image-modal-width: 600px;
 }
 
 /* HEADER */
@@ -41,4 +42,22 @@ main {
   position: absolute;
   left: calc(50% - (var(--pin-heigth) / 2));
   top: calc(calc(var(--pin-heigth) / 3) * -1);
+}
+
+/* MODAL */
+
+#image-modal-container {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: calc(50% - var(--image-modal-width) / 2);
+}
+
+#image-modal {
+  width: var(--image-modal-width);
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 20px 30px;
 }
