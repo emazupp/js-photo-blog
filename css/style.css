@@ -3,7 +3,7 @@
 header {
   background-image: url(../img/wall.png);
   background-size: contain;
-  height: 130px;
+  height: 200px;
 }
 
 .header-title {
@@ -16,5 +16,8 @@ header {
 main {
   background-image: url(../img/cork.png);
   background-size: contain;
-  height: 100vh;
+}
+
+.card {
+  border-radius: 0px !important;
 }
