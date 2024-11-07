@@ -13,7 +13,7 @@ header {
 }
 
 .header-title {
-  font-size: min(10vw, 100px);
+  font-size: min(15vw, 100px);
   font-style: italic;
 }
 

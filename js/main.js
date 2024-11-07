@@ -1,13 +1,5 @@
 const cardsContainerEL = document.getElementById("cards-container");
 const cardsLimit = 6;
-let singleCardHtml = `<div class="col-md-6 col-lg-4">
-            <div class="card border-1">
-              <img class="p-3" src="./img/wall.png" alt="img" />
-              <div class="card-body">
-                <p class="card-text">Ciao questo è un testo di prova</p>
-              </div>
-            </div>
-          </div> `;
 
 fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
   .then((res) => res.json())
@@ -24,4 +16,11 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
           </div> `;
     }
     cardsContainerEL.innerHTML = cardsContentHtml;
+    const cardsEl = document.querySelectorAll(".card");
+
+    for (card of cardsEl) {
+      card.addEventListener("click", function () {
+        console.log(this.children[0].getAttribute("src"));
+      });
+    }
   });
