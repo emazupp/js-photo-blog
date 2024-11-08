@@ -40,6 +40,13 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
       });
       closeModalButton.addEventListener("click", closeModal);
     }
+  })
+  .catch((error) => {
+    cardsContainerEl.innerHTML = `<div class="col-12">
+      <div class="p-2 bg-danger rounded"> 
+          <p class="fs-5 fw-bold">Errore: ${error}</p>
+      </div>
+    </div> `;
   });
 
 /* Picsum: https://picsum.photos/600 */
