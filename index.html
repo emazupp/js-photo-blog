@@ -13,15 +13,21 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>PHOTO BLOG</title>
   </head>
 
   <body>
     <!-- MODAL -->
-    <div id="image-modal-container" class="d-none d-flex flex-column">
+    <div id="image-modal-container" class="d-none">
       <div class="d-flex justify-content-center mb-4">
-        <button id="close-modal-button" class="btn btn-primary">Chiudi</button>
+        <button id="close-modal-button" class="btn btn-primary">CHIUDI</button>
       </div>
       <img id="image-modal" src="" alt="" />
     </div>
@@ -36,8 +42,8 @@
 
     <!-- MAIN & CARDS -->
     <main id="main" class="pt-5">
-      <div class="container-sm">
-        <div id="cards-container" class="row g-4"></div>
+      <div class="container">
+        <div id="cards-container" class="row g-5"></div>
       </div>
     </main>
     <script
