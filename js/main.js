@@ -43,3 +43,4 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
   });
 
 /* Picsum: https://picsum.photos/600 */
+/* queste funzionano sempre */
