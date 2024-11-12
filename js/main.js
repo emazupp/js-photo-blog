@@ -3,9 +3,11 @@ const cardsLimit = 6;
 const modalContainerEl = document.getElementById("image-modal-container");
 const modalEl = document.getElementById("image-modal");
 const closeModalButton = document.getElementById("close-modal-button");
+const bodyEl = document.getElementById("body");
 
 const closeModal = () => {
   modalContainerEl.classList.add("d-none");
+  bodyEl.classList.remove("overflow-y-hidden");
 };
 
 const upperCaseFirstLetter = (title) => {
@@ -36,7 +38,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
       card.addEventListener("click", function () {
         modalEl.src = this.children[0].getAttribute("src");
         modalContainerEl.classList.remove("d-none");
-        modalContainerEl.classList.add("obfuscated");
+        bodyEl.classList.add("overflow-y-hidden");
       });
       closeModalButton.addEventListener("click", closeModal);
     }
