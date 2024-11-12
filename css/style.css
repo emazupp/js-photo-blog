@@ -1,7 +1,7 @@
 /* UTILS */
 
 :root {
-  --pin-heigth: 50px;
+  --pin-heigth: 70px;
 }
 
 body {
@@ -59,6 +59,15 @@ main {
   top: calc(calc(var(--pin-heigth) / 3) * -1);
 }
 
+.card-text {
+  font-size: 2rem !important;
+}
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 /* MODAL */
 
 #image-modal-container {
@@ -81,16 +90,18 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   :root {
-    --pin-heigth: 70px;
+    --pin-heigth: 50px;
   }
-  .card-text.fs-5 {
-    font-size: 2rem !important;
+
+  .card-text {
+    font-size: 1.5rem !important;
   }
+
   .container {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
