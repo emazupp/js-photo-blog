@@ -10,6 +10,11 @@ const closeModal = () => {
   bodyEl.classList.remove("overflow-y-hidden");
 };
 
+const openModal = () => {
+  modalContainerEl.classList.remove("d-none");
+  bodyEl.classList.add("overflow-y-hidden");
+};
+
 const upperCaseFirstLetter = (title) => {
   const firstLetterUpperCased = title[0].toUpperCase();
   const titleExceptFirstLetter = title.substring(1);
@@ -37,11 +42,15 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
     for (card of cardsEl) {
       card.addEventListener("click", function () {
         modalEl.src = this.children[0].getAttribute("src");
-        modalContainerEl.classList.remove("d-none");
-        bodyEl.classList.add("overflow-y-hidden");
+        openModal();
       });
-      closeModalButton.addEventListener("click", closeModal);
     }
+
+    /* EVENTLISTENER CHIUSURA MODAL */
+    closeModalButton.addEventListener("click", closeModal);
+    modalContainerEl.addEventListener("click", (e) => {
+      if (e.target.id === "image-modal-container") closeModal();
+    });
   })
   .catch((error) => {
     cardsContainerEl.innerHTML = `<div class="col-12">
