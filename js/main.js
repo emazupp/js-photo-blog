@@ -49,7 +49,6 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
     /* EVENTLISTENER CHIUSURA MODAL */
     closeModalButton.addEventListener("click", closeModal);
     modalContainerEl.addEventListener("click", (e) => {
-      console.log(e);
       if (e.target.id === "image-modal-container") closeModal();
     });
   })
