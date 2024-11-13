@@ -23,9 +23,9 @@ const upperCaseFirstLetter = (title) => {
 
 fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
   .then((res) => res.json())
-  .then((photo) => {
+  .then((photos) => {
     let cardsContentHtml = "";
-    for (el of photo) {
+    for (el of photos) {
       const upperCasedTitle = upperCaseFirstLetter(el.title);
       cardsContentHtml += `<div class="col-md-6 col-lg-4">
             <div class="card border-1">
@@ -49,6 +49,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
     /* EVENTLISTENER CHIUSURA MODAL */
     closeModalButton.addEventListener("click", closeModal);
     modalContainerEl.addEventListener("click", (e) => {
+      console.log(e);
       if (e.target.id === "image-modal-container") closeModal();
     });
   })
@@ -59,6 +60,3 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + cardsLimit)
       </div>
     </div> `;
   });
-
-/* Picsum: https://picsum.photos/600 */
-/* queste funzionano sempre */
